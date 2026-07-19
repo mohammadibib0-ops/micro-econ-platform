@@ -5,42 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مبادئ الاقتصاد الجزئي | الفصل الأول</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Tajawal', sans-serif; background-color: #f8fafc; }
         .nav-tab-active { background-color: #ffffff; color: #0f172a; border-bottom: 3px solid #f97316; }
+        .nav-tab-inactive { color: #64748b; }
+        .content-section { display: none; }
+        .active-section { display: block; }
     </style>
 </head>
 <body>
     <header class="bg-slate-800 text-white p-4 shadow-lg">
         <h1 class="text-xl font-bold">الفصل الأول: الأساسيات والنماذج</h1>
+        <div class="flex gap-4 mt-4">
+            <button onclick="showSection('explanation')" class="nav-tab-active px-3 py-1 rounded">الشرح الوافي</button>
+            <button onclick="showSection('concepts')" class="nav-tab-inactive px-3 py-1 rounded">المفاهيم الأساسية</button>
+        </div>
     </header>
 
     <main class="p-4 max-w-4xl mx-auto">
-        <!-- قسم الشرح -->
-        <section class="bg-white p-6 rounded-lg shadow-sm border border-slate-200">
-            <h2 class="text-lg font-bold mb-4 text-slate-800">1. المشكلة الاقتصادية (الندرة)</h2>
-            <p class="mb-4">علم الاقتصاد هو دراسة الكيفية التي يتخذ بها البشر اختياراتهم لتلبية احتياجاتهم في ظل ندرة الموارد.</p>
-            <div class="space-y-4">
-                <div class="p-3 bg-blue-50 rounded-lg">
-                    <h3 class="font-bold text-blue-800">الحاجات غير المحدودة</h3>
-                    <p class="text-sm">رغبات الإنسان متجددة ولا نهائية.</p>
+        <!-- قسم الشرح الوافي -->
+        <section id="explanation" class="content-section active-section bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+            <h2 class="text-xl font-bold mb-6 text-slate-800 border-b pb-2">مدخل إلى علم الاقتصاد</h2>
+            
+            <div class="space-y-6">
+                <div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">1. المشكلة الاقتصادية (الندرة)</h3>
+                    <p class="text-slate-700 leading-relaxed">
+                        جوهر علم الاقتصاد هو <strong>الندرة</strong>. البشر لديهم حاجات ورغبات غير محدودة، بينما الموارد المتاحة (عناصر الإنتاج: العمل، الأرض، رأس المال، التنظيم) محدودة. هذا التناقض يجبر الأفراد والمجتمعات على الاختيار.
+                    </p>
                 </div>
-                <div class="p-3 bg-orange-50 rounded-lg">
-                    <h3 class="font-bold text-orange-800">الموارد المحدودة</h3>
-                    <p class="text-sm">مثل العمل، الأرض، رأس المال، والتنظيم.</p>
+
+                <div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">2. تكلفة الفرصة البديلة</h3>
+                    <p class="text-slate-700 leading-relaxed">
+                        بما أن الموارد نادرة، فإن اختيار إنتاج أو استهلاك شيء يعني التضحية بشيء آخر. <strong>تكلفة الفرصة البديلة</strong> هي قيمة أفضل بديل تم التخلي عنه عند اتخاذ قرار معين.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2">3. الأفكار الاقتصادية الثلاث</h3>
+                    <ul class="grid md:grid-cols-3 gap-4 mt-3">
+                        <li class="p-4 bg-blue-50 rounded-lg border border-blue-100">
+                            <strong class="block text-blue-900 mb-1">الرشد (Rationality)</strong>
+                            <span class="text-sm">الأفراد يستجيبون للحوافز، ويقومون بحساب التكاليف والمنافع لاختيار الأفضل.</span>
+                        </li>
+                        <li class="p-4 bg-orange-50 rounded-lg border border-orange-100">
+                            <strong class="block text-orange-900 mb-1">الحوافز (Incentives)</strong>
+                            <span class="text-sm">تغير التكاليف أو المنافع يغير سلوك الأفراد (مثلاً: ارتفاع السعر يقلل الطلب).</span>
+                        </li>
+                        <li class="p-4 bg-green-50 rounded-lg border border-green-100">
+                            <strong class="block text-green-900 mb-1">التحليل الحدي (Marginal)</strong>
+                            <span class="text-sm">القرار الاقتصادي الرشيد يتم عند مقارنة المنفعة الحدية بالتكلفة الحدية.</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- قسم الأفكار -->
-        <section class="mt-6 bg-white p-6 rounded-lg shadow-sm border border-slate-200">
-            <h2 class="text-lg font-bold mb-4 text-slate-800">2. الأفكار الاقتصادية الثلاث</h2>
-            <ul class="space-y-3">
-                <li class="p-3 border-r-4 border-blue-500 bg-slate-50"><strong>الرشد:</strong> الأفراد يتخذون قراراتهم لتحقيق أفضل نتيجة ممكنة.</li>
-                <li class="p-3 border-r-4 border-orange-500 bg-slate-50"><strong>الحوافز:</strong> الاستجابة للتغيرات في التكاليف والمنافع.</li>
-                <li class="p-3 border-r-4 border-green-500 bg-slate-50"><strong>التحليل الحدي:</strong> اتخاذ القرار بناءً على المنافع والتكاليف الإضافية (عند الهامش).</li>
-            </ul>
+        <!-- قسم المفاهيم -->
+        <section id="concepts" class="content-section mt-6 bg-white p-6 rounded-lg shadow-sm border border-slate-200">
+            <h2 class="text-xl font-bold mb-6 text-slate-800">الاقتصاد الجزئي والكلي</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="border-r-4 border-slate-400 pr-4">
+                    <h3 class="font-bold text-slate-800 mb-2">الاقتصاد الجزئي (Microeconomics)</h3>
+                    <p class="text-slate-600 text-sm">يدرس القرارات التي يتخذها الأفراد والشركات، وكيفية تفاعلهم في الأسواق المختلفة.</p>
+                </div>
+                <div class="border-r-4 border-slate-800 pr-4">
+                    <h3 class="font-bold text-slate-800 mb-2">الاقتصاد الكلي (Macroeconomics)</h3>
+                    <p class="text-slate-600 text-sm">يدرس الاقتصاد ككل، مثل التضخم، البطالة، والنمو الاقتصادي على مستوى الدولة.</p>
+                </div>
+            </div>
         </section>
     </main>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active-section'));
+            document.getElementById(id).classList.add('active-section');
+            document.querySelectorAll('button').forEach(b => b.classList.replace('nav-tab-active', 'nav-tab-inactive'));
+            event.target.classList.replace('nav-tab-inactive', 'nav-tab-active');
+        }
+    </script>
 </body>
 </html>
